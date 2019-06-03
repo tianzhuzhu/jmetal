@@ -17,7 +17,7 @@ import org.uma.jmetal.util.comparator.RankingAndCrowdingDistanceComparator;
 
 import java.io.FileNotFoundException;
 import java.util.List;
-
+//多目标元胞遗传算法
 /**
  * Class to configure and run the MOCell algorithm
  *

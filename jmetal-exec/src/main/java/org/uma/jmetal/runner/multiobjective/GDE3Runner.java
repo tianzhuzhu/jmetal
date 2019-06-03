@@ -1,5 +1,5 @@
 package org.uma.jmetal.runner.multiobjective;
-
+//广义差分进化
 import org.uma.jmetal.algorithm.Algorithm;
 import org.uma.jmetal.algorithm.multiobjective.gde3.GDE3Builder;
 import org.uma.jmetal.operator.impl.crossover.DifferentialEvolutionCrossover;

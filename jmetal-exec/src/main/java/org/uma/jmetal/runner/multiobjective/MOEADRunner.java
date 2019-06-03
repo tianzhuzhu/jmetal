@@ -1,5 +1,5 @@
 package org.uma.jmetal.runner.multiobjective;
-
+//多目标差分进化
 import org.uma.jmetal.algorithm.Algorithm;
 import org.uma.jmetal.algorithm.multiobjective.moead.AbstractMOEAD;
 import org.uma.jmetal.algorithm.multiobjective.moead.MOEADBuilder;

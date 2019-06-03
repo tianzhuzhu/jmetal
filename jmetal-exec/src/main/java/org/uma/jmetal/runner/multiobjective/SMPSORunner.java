@@ -15,7 +15,7 @@ import org.uma.jmetal.util.archive.impl.CrowdingDistanceArchive;
 import org.uma.jmetal.util.evaluator.impl.SequentialSolutionListEvaluator;
 
 import java.util.List;
-
+//(Self-adaptive Mutation on Particle Swarm Optimization
 /**
  * Class for configuring and running the SMPSO algorithm
  *

@@ -1,6 +1,6 @@
 
 package org.uma.jmetal.runner.multiobjective;
-
+//强度 Pareto 进化算法
 import org.uma.jmetal.algorithm.Algorithm;
 import org.uma.jmetal.algorithm.multiobjective.spea2.SPEA2Builder;
 import org.uma.jmetal.operator.CrossoverOperator;

@@ -15,7 +15,7 @@ import org.uma.jmetal.util.fileoutput.SolutionListOutput;
 import org.uma.jmetal.util.fileoutput.impl.DefaultFileOutputContext;
 
 import java.util.List;
-
+//非劣排序遗传算法
 /**
  * Class to configure and run the NSGA-III algorithm
  */

@@ -12,7 +12,7 @@ import org.uma.jmetal.util.*;
 
 import java.io.FileNotFoundException;
 import java.util.List;
-
+//Pareto 包络选择算法
 /**
  * Class for configuring and running the PESA2 algorithm
  *
