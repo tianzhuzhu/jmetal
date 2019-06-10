@@ -8,7 +8,7 @@ import org.uma.jmetal.solution.util.RepairDoubleSolutionAtBounds;
 import org.uma.jmetal.util.JMetalException;
 import org.uma.jmetal.util.pseudorandom.JMetalRandom;
 import org.uma.jmetal.util.pseudorandom.RandomGenerator;
-
+//多项式变异
 /**
  * This class implements a polynomial mutation operator
  *

@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
-
+//差分进化算法
 /**
  * This class implements a differential evolution algorithm.
  * @author Antonio J. Nebro <antonio@lcc.uma.es>
@@ -46,6 +46,7 @@ public class DifferentialEvolution extends AbstractDifferentialEvolution<DoubleS
     this.selectionOperator = selectionOperator;
     this.evaluator = evaluator;
 
+    //比较器
     comparator = new ObjectiveComparator<DoubleSolution>(0);
   }
   
@@ -75,11 +76,14 @@ public class DifferentialEvolution extends AbstractDifferentialEvolution<DoubleS
       DoubleSolution newIndividual = getProblem().createSolution();
       population.add(newIndividual);
     }
+
     return population;
   }
 
   @Override protected List<DoubleSolution> evaluatePopulation(List<DoubleSolution> population) {
+
     return evaluator.evaluate(population, getProblem());
+
   }
 
   @Override protected List<DoubleSolution> selection(List<DoubleSolution> population) {
@@ -102,7 +106,7 @@ public class DifferentialEvolution extends AbstractDifferentialEvolution<DoubleS
     return offspringPopulation;
   }
 
-  @Override protected List<DoubleSolution> replacement(List<DoubleSolution> population,
+  @Override protected List<DoubleSolution>   replacement(List<DoubleSolution> population,
       List<DoubleSolution> offspringPopulation) {
     List<DoubleSolution> pop = new ArrayList<>();
 

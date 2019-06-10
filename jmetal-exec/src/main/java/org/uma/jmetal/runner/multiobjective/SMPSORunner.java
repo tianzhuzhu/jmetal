@@ -21,7 +21,7 @@ import java.util.List;
  *
  * @author Antonio J. Nebro <antonio@lcc.uma.es>
  */
-public class SMPSORunner extends AbstractAlgorithmRunner {
+  public class SMPSORunner extends AbstractAlgorithmRunner {
   /**
    * @param args Command line arguments. The first (optional) argument specifies
    *             the problem to solve.

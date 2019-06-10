@@ -13,7 +13,7 @@ import org.uma.jmetal.util.ProblemUtils;
 import org.uma.jmetal.util.evaluator.impl.SequentialSolutionListEvaluator;
 
 import java.util.List;
-
+//最优粒子群优化算法
 /**
  * Class for configuring and running the OMOPSO algorithm
  *

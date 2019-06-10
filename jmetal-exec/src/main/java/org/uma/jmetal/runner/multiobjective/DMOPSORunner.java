@@ -1,5 +1,5 @@
 package org.uma.jmetal.runner.multiobjective;
-
+//基于分解的多目标粒子群算法
 import org.uma.jmetal.algorithm.Algorithm;
 import org.uma.jmetal.algorithm.multiobjective.dmopso.DMOPSO;
 import org.uma.jmetal.algorithm.multiobjective.dmopso.DMOPSO.FunctionType;
@@ -33,8 +33,8 @@ public class DMOPSORunner extends AbstractAlgorithmRunner {
 
     String referenceParetoFront = "" ;
 
-    String problemName ;
-    if (args.length == 1) {
+    String problemName;
+     if (args.length == 1) {
       problemName = args[0];
     } else if (args.length == 2) {
       problemName = args[0] ;

@@ -37,7 +37,7 @@ public class DifferentialEvolutionRunner {
     DifferentialEvolutionSelection selection;
     DifferentialEvolutionCrossover crossover;
     SolutionListEvaluator<DoubleSolution> evaluator ;
-
+    //范围
     problem = new Sphere(20) ;
 
     int numberOfCores ;
@@ -48,11 +48,12 @@ public class DifferentialEvolutionRunner {
     }
 
     if (numberOfCores == 1) {
+      //根据cpu核数选择评估器
       evaluator = new SequentialSolutionListEvaluator<DoubleSolution>() ;
     } else {
       evaluator = new MultithreadedSolutionListEvaluator<DoubleSolution>(numberOfCores, problem) ;
     }
-
+    //cr 交叉算子 f 变异算子
     crossover = new DifferentialEvolutionCrossover(0.5, 0.5, "rand/1/bin") ;
     selection = new DifferentialEvolutionSelection();
 
@@ -62,10 +63,10 @@ public class DifferentialEvolutionRunner {
         .setSolutionListEvaluator(evaluator)
         .setMaxEvaluations(25000)
         .setPopulationSize(100)
-        .build() ;
+        .build();
 
     AlgorithmRunner algorithmRunner = new AlgorithmRunner.Executor(algorithm)
-        .execute() ;
+        .execute();
 
     DoubleSolution solution = algorithm.getResult() ;
     long computingTime = algorithmRunner.getComputingTime() ;

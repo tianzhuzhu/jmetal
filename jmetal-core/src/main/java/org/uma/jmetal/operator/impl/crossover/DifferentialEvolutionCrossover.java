@@ -60,7 +60,9 @@ public class DifferentialEvolutionCrossover implements CrossoverOperator<DoubleS
    * @param variant
    */
   public DifferentialEvolutionCrossover(double cr, double f, String variant) {
-	  this(cr, f, variant, (a, b) -> JMetalRandom.getInstance().nextInt(a, b), (a, b) -> JMetalRandom.getInstance().nextDouble(a, b));
+
+    this(cr, f, variant, (a, b) -> JMetalRandom.getInstance().nextInt(a, b), (a, b) -> JMetalRandom.getInstance().nextDouble(a, b));
+
   }
 
   /**
@@ -144,15 +146,14 @@ public class DifferentialEvolutionCrossover implements CrossoverOperator<DoubleS
 
     int numberOfVariables = parentSolutions.get(0).getNumberOfVariables();
     jrand = jRandomGenerator.getRandomValue(0, numberOfVariables - 1);
-
+    //差分进化算法变异策略选择
     // STEP 4. Checking the DE variant
     if ((DEFAULT_DE_VARIANT.equals(variant)) ||
             "best/1/bin".equals(variant)) {
       for (int j = 0; j < numberOfVariables; j++) {
         if (crRandomGenerator.getRandomValue(0.0, 1.0) < cr || j == jrand) {
           double value;
-          value = parentSolutions.get(2).getVariableValue(j) + f * (parentSolutions.get(0).getVariableValue(
-            j) -
+          value = parentSolutions.get(2).getVariableValue(j) + f * (parentSolutions.get(0).getVariableValue(j) -
             parentSolutions.get(1).getVariableValue(j));
 
           if (value < child.getLowerBound(j)) {

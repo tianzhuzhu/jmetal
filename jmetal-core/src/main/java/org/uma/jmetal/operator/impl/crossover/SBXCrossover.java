@@ -10,7 +10,7 @@ import org.uma.jmetal.util.pseudorandom.RandomGenerator;
 
 import java.util.ArrayList;
 import java.util.List;
-
+//Simulated Binary Crossover
 /**
  * This class allows to apply a SBX crossover operator using two parent solutions (Double encoding).
  * A {@link RepairDoubleSolution} object is used to decide the strategy to apply when a value is out

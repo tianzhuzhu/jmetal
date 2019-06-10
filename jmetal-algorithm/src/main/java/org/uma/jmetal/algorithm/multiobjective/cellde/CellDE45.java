@@ -83,7 +83,7 @@ public class CellDE45 implements Algorithm<List<DoubleSolution>> {
     while (!isStoppingConditionReached()) {
       for (int i = 0; i < populationSize; i++) {
         DoubleSolution solution = (DoubleSolution) population.get(i).copy();
-
+//        System.out.println(i+"    "+solution.getObjective(0));
         currentNeighbors = neighborhood.getNeighbors(population, i);
         currentNeighbors.add(population.get(i));
 
@@ -135,6 +135,7 @@ public class CellDE45 implements Algorithm<List<DoubleSolution>> {
           }
         }
       }
+
     }
 
   }
